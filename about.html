@@ -8,6 +8,61 @@
   <meta name="color-scheme" content="light dark">
 </head>
 <body>
+  <nav>
+    <ul>
+      <li>
+        <a href="./index.html">Home</a>
+      </li>
+      <li>
+        <a href="#">Services</a>
+      </li>
+      <li>
+        <a href="./about.html">About</a>
+      </li>
+      <li>
+        <a href="#">Blog</a>
+      </li>
+      <li>
+        <a href="#">Contact Us</a>
+      </li>
+      <li>
+        <a href="./login.html" class="sign-in">Sign In</a>
+      </li>
+      <li>
+        <a href="./login.html" class="sign-up">Sign Up</a>
+      </li>
+    </ul>
+    <div class="hamburger">
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+    </div>
+  </nav>
+  <div class="menubar">
+    <ul>
+      <li>
+        <a href="./index.html">Home</a>
+      </li>
+      <li>
+        <a href="#">Services</a>
+      </li>
+      <li>
+        <a href="./about.html">About</a>
+      </li>
+      <li>
+        <a href="#">Blog</a>
+      </li>
+      <li>
+        <a href="#">Contact Us</a>
+      </li>
+      <li>
+        <a href="./login.html" class="sign-in">Sign In</a>
+      </li>
+      <li>
+        <a href="./login.html" class="sign-up">Sign Up</a>
+      </li>
+    </ul>
+  </div>
   <main class="wrap">
     <header class="hero">
       <div class="avatar" aria-hidden="true">CV</div>
@@ -170,5 +225,22 @@
       <p>Find me on <a href="#">GitHub</a> · <a href="#">LinkedIn</a></p>
     </footer>
   </main>
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const menubar = document.querySelector('.menubar');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('hamburger-active');
+      menubar.classList.toggle('active');
+    });
+
+    const menuLinks = menubar.querySelectorAll('a');
+    menuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('hamburger-active');
+        menubar.classList.remove('active');
+      });
+    });
+  </script>
 </body>
 </html>

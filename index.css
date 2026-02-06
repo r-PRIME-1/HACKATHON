@@ -1,41 +1,48 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
 
+/* Theme variables matched to about.css */
+:root{
+  --bg:#0b1220;
+  --card:#0f1724;
+  --muted:#9aa6bd;
+  --accent1:#FF4B2B;
+  --accent2:#FF416C;
+  --glass: rgba(255,255,255,0.03);
+  --radius:14px;
+  --font-sans: 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
 * {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+html {
+  height: 100%;
+  background: var(--bg);
+}
+
 body {
   padding: 0;
   margin: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-sans);
+  background: var(--bg);
+  color: var(--muted);
+  height: 100%;
 }
 
 nav {
-  padding: 5px 5%;
+  padding: 12px 5%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
-    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  background: rgba(15, 23, 36, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(155, 166, 189, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   z-index: 1;
-}
-nav .logo {
-  display: flex;
-  align-items: center;
-}
-nav .logo img {
-  height: 25px;
-  width: auto;
-  margin-right: 10px;
-}
-nav .logo h1 {
-  font-size: 1.1rem;
-  background: linear-gradient(to right, #b927fc 0%, #2c64fc 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 nav ul {
@@ -47,7 +54,7 @@ nav ul li {
 }
 nav ul li a {
   text-decoration: none;
-  color: #000;
+  color: #b0b8d4;
   font-size: 95%;
   font-weight: 400;
   padding: 4px 8px;
@@ -55,7 +62,30 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  background-color: #f5f5f5;
+  background-color: rgba(255,165,0,0.1);
+  color: #FF4B2B;
+}
+
+nav ul li a.sign-in {
+  color: #FF4B2B;
+  font-weight: 500;
+}
+
+nav ul li a.sign-up {
+  background: linear-gradient(90deg,var(--accent1),var(--accent2));
+  color: #fff;
+  padding: 6px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: transform 80ms ease-in, box-shadow 80ms ease-in;
+  box-shadow: 0 4px 12px rgba(255,75,43,0.3);
+}
+
+nav ul li a.sign-up:hover {
+  background-color: rgba(255,165,0,0.1);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255,75,43,0.4);
 }
 
 .hamburger {
@@ -66,7 +96,7 @@ nav ul li a:hover {
 .hamburger .line {
   width: 25px;
   height: 1px;
-  background-color: #1f1f1f;
+  background-color: #b0b8d4;
   display: block;
   margin: 7px auto;
   transition: all 0.3s ease-in-out;
@@ -104,7 +134,8 @@ nav ul li a:hover {
   width: 60%;
   height: 100vh;
   padding: 20% 0;
-  background: rgba(255, 255, 255);
+  background: var(--card);
+  box-shadow: 0 12px 28px rgba(20,30,50,0.06);
   transition: all 0.5s ease-in;
   z-index: 2;
 }
@@ -123,7 +154,7 @@ nav ul li a:hover {
 
 .menubar ul li a {
   text-decoration: none;
-  color: #000;
+  color: #FF4B2B;
   font-size: 95%;
   font-weight: 400;
   padding: 5px 10px;
@@ -131,7 +162,17 @@ nav ul li a:hover {
 }
 
 .menubar ul li a:hover {
-  background-color: #f5f5f5;
+  background-color: rgba(255,165,0,0.1);
+}
+
+.menubar ul li a.sign-up {
+  background: linear-gradient(90deg,var(--accent1),var(--accent2));
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 10px;
 }
 @media screen and (max-width: 790px) {
   .hamburger {
@@ -145,15 +186,15 @@ nav ul li a:hover {
 
 /* Live Monitoring Section */
 .live-monitoring {
-  padding: 40px 20px;
-  background-color: #f5f5f5;
-  text-align: center; /* center the heading */
+  padding: 48px 20px;
+  background-color: transparent;
+  text-align: center;
 }
 
 .live-monitoring h2 {
   margin-bottom: 30px;
   font-size: 28px;
-  color: #333;
+  color: #fff;
 }
 
 /* Center wrapper */
@@ -165,27 +206,46 @@ nav ul li a:hover {
 /* Camera feed box */
 .camera-feed {
   position: relative;
-  background-color: #000;
-  width: 600px; /* fixed width for better centering */
-  border-radius: 8px;
+  background-color: var(--card);
+  width: 100%;
+  max-width: 720px;
+  border-radius: 12px;
   overflow: hidden;
+  box-shadow: 0 12px 28px rgba(20,30,50,0.06);
+  padding: 0;
 }
 
 .camera-feed video {
   width: 100%;
-  height: 350px;
+  height: auto;
+  aspect-ratio: 16/9;
   object-fit: cover;
 }
 
 /* Status */
 .camera-status {
+@media (max-width: 900px){
+  .live-monitoring{padding:36px 18px}
+  .camera-feed{max-width:640px}
+}
+
+/* Small screens: full width, tighter spacing */
+@media (max-width: 600px){
+  nav{padding:8px 6%}
+  .live-monitoring{padding:20px 12px}
+  .camera-feed{max-width:100%;border-radius:10px}
+  .camera-feed video{aspect-ratio:16/9}
+  .camera-feed .camera-name{font-size:13px;padding:6px 8px}
+  .camera-feed button{padding:8px 12px;right:10px;bottom:10px}
+  .menubar{width:80%}
+}
   position: absolute;
   top: 10px;
   left: 10px;
   background-color: rgba(0,0,0,0.6);
-  color: #00ff00; /* online */
-  padding: 4px 8px;
-  border-radius: 4px;
+  color: #00ff00;
+  padding: 6px 10px;
+  border-radius: 8px;
   font-size: 14px;
 }
 
@@ -194,7 +254,7 @@ nav ul li a:hover {
   position: absolute;
   bottom: 10px;
   left: 10px;
-  color: white;
+  color: #fff;
   background-color: rgba(0,0,0,0.5);
   padding: 3px 6px;
   border-radius: 3px;
@@ -204,17 +264,20 @@ nav ul li a:hover {
 /* Snapshot button */
 .camera-feed button {
   position: absolute;
-  bottom: 10px;
-  right: 10px;
-  padding: 5px 10px;
+  bottom: 12px;
+  right: 12px;
+  padding: 10px 14px;
   border: none;
-  background-color: #00aaff;
+  background: linear-gradient(90deg,var(--accent1),var(--accent2));
   color: white;
-  border-radius: 4px;
+  border-radius: 10px;
   cursor: pointer;
+  font-weight:700;
+  box-shadow:0 8px 18px rgba(106,140,255,0.12);
 }
 
-.camera-feed button:hover {
-  background-color: #0088cc;
-}
+.camera-feed button:hover{opacity:0.95}
+
+/* small utility to match about buttons */
+.btn{display:inline-block;padding:12px 18px;border-radius:12px;background:linear-gradient(90deg,var(--accent1),var(--accent2));color:white;text-decoration:none;font-weight:700;margin-right:10px;box-shadow:0 8px 18px rgba(106,140,255,0.18)}
 
