@@ -8,11 +8,13 @@
     <link rel="stylesheet" type="text/css" target="_blank" href="index.css" />
   </head>
   <body>
+    <section class=" navi">
     <nav>
       <div class="logo">
         <!-- <img src="assets/Logo64x64.png" alt="logo" /> -->
         <h1>LOGO</h1>
       </div>
+
       <ul>
         <li>
           <a href="#">Home</a>
@@ -49,6 +51,23 @@
         </li>
       </ul>
     </div>
+    </section>
+
+    <!-- Live Monitoring Component -->
+<section class="live-monitoring">
+ <!-- Live Monitoring Component (Single Camera) -->
+<section class="live-monitoring">
+  <h2>Live Monitoring</h2>
+  <div class="camera-feed">
+    <span class="camera-status online">● Online</span>
+    <video id="camera" autoplay muted playsinline></video>
+    <div class="camera-name">Camera 1</div>
+    <button onclick="captureSnapshot()">📸 Capture</button>
+  </div>
+</section>
+
+</section>
+
 
     <script src="index.js"></script>
   </body>
