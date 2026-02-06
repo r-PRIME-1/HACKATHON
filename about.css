@@ -7,7 +7,7 @@
   --accent2:#FF416C; /* pink */
   --glass: rgba(255,255,255,0.7);
   --radius:14px;
-  --max:1100px;
+  --max:1200px;
   --font-sans: 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
 }
 @media (prefers-color-scheme: dark){
@@ -36,10 +36,31 @@ body{margin:0;font-family:var(--font-sans);background:var(--bg);color:var(--mute
 .skills{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:6px}
 .skills li{background:var(--glass);padding:8px;border-radius:8px;color:var(--muted);font-weight:600}
 .page-foot{text-align:center;margin-top:20px;color:var(--muted)}
+/* New section styles */
+.section-title{margin:18px 0 12px;font-size:20px}
+.features{margin-top:20px}
+.features-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.feature{min-height:100px}
+.how{margin-top:18px}
+.how .steps{padding-left:18px}
+.how .steps li{margin-bottom:8px}
+.usecases{margin-top:18px}
+.use-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.team{margin-top:18px}
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;align-items:start}
+.member{display:flex;gap:10px;align-items:center;padding:12px}
+.member-avatar{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,var(--accent1),var(--accent2));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700}
+.member-name{margin:0;font-weight:700;color:var(--muted)}
+.faq{margin-top:18px}
+.faq h4{margin:10px 0 6px}
+.contact{margin-top:18px}
 @media (max-width:900px){
   .hero{flex-direction:row}
   .wrap{margin:18px}
   .grid{grid-template-columns:1fr}
+  .features-grid{grid-template-columns:1fr}
+  .use-grid{grid-template-columns:1fr}
+  .team-grid{grid-template-columns:1fr}
 }
 @media (max-width:520px){
   .hero{flex-direction:column;align-items:flex-start}

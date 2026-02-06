@@ -22,6 +22,7 @@
       </div>
     </header>
 
+    <!-- Primary info grid -->
     <section class="grid">
       <article class="card">
         <h2>Overview</h2>
@@ -41,10 +42,85 @@
       <article class="card">
         <h2>Deployments</h2>
         <ul>
-          <li><a href="#">Campus Safety</a> — zone monitoring and lost-item detection</li>
-          <li><a href="#">Retail Analytics</a> — footfall, dwell time, and queue management</li>
+          <li><a href="#use-cases">Campus Safety</a> — zone monitoring and lost-item detection</li>
+          <li><a href="#use-cases">Retail Analytics</a> — footfall, dwell time, and queue management</li>
         </ul>
       </article>
+    </section>
+
+    <!-- Extended content sections -->
+    <section id="features" class="features">
+      <h2 class="section-title">Features</h2>
+      <div class="features-grid">
+        <div class="feature card">
+          <h3>Real-time Detection</h3>
+          <p>Low-latency inference with prioritized alerts for critical events.</p>
+        </div>
+        <div class="feature card">
+          <h3>Privacy Controls</h3>
+          <p>On-device anonymization and selective recording preserve user privacy.</p>
+        </div>
+        <div class="feature card">
+          <h3>Scalable Analytics</h3>
+          <p>Cloud dashboards and APIs to explore trends and integrate with systems.</p>
+        </div>
+        <div class="feature card">
+          <h3>Edge-first</h3>
+          <p>Runs efficiently on low-power hardware with periodic sync to cloud.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="how" class="how">
+      <h2 class="section-title">How it works</h2>
+      <ol class="steps">
+        <li><strong>Capture:</strong> Streams are ingested at the edge.</li>
+        <li><strong>Process:</strong> Optimized models run locally for fast detection.</li>
+        <li><strong>Protect:</strong> Sensitive pixels are anonymized before upload.</li>
+        <li><strong>Analyze:</strong> Selective clips and metadata are sent for aggregation.</li>
+      </ol>
+    </section>
+
+    <section id="use-cases" class="usecases">
+      <h2 class="section-title">Use cases</h2>
+      <div class="use-grid">
+        <article class="card">
+          <h3>Campus Safety</h3>
+          <p>Perimeter monitoring, intrusion alerts, and lost-item search.</p>
+        </article>
+        <article class="card">
+          <h3>Retail & Venues</h3>
+          <p>Footfall analysis, queue length detection, and layout optimization.</p>
+        </article>
+        <article class="card">
+          <h3>Smart Cities</h3>
+          <p>Traffic flow monitoring, incident detection, and public-space analytics.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="team" class="team">
+      <h2 class="section-title">Team</h2>
+      <div class="team-grid">
+        <div class="member card"><div class="member-avatar">AL</div><p class="member-name">Alex Lee — Founder</p></div>
+        <div class="member card"><div class="member-avatar">RM</div><p class="member-name">Rita Mehra — ML Engineer</p></div>
+        <div class="member card"><div class="member-avatar">JT</div><p class="member-name">J. Torres — Product</p></div>
+      </div>
+    </section>
+
+    <section id="faq" class="faq">
+      <h2 class="section-title">FAQ</h2>
+      <div class="card">
+        <h4>Is video stored in the cloud?</h4>
+        <p>Only anonymized or user-approved clips are uploaded; metadata is the default payload.</p>
+        <h4>What hardware is supported?</h4>
+        <p>We target ARM-based edge devices and x86 gateways with optional GPU acceleration.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="contact card">
+      <h2>Contact</h2>
+      <p>Interested in a demo or pilot? Email <a href="mailto:contact@curveilance.example">contact@curveilance.example</a> or use the demo link above.</p>
     </section>
 
     <footer class="page-foot">
