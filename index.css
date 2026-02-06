@@ -1,5 +1,46 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
 
+/* Keyframe Animations */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.8);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
 /* Theme variables matched to about.css */
 :root{
   --bg:#0b1220;
@@ -189,6 +230,15 @@ nav ul li a.sign-up:hover {
   padding: 48px 20px;
   background-color: transparent;
   text-align: center;
+  animation: slideInUp 0.8s ease-out;
+}
+
+.live-monitoring h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 32px;
+  animation: slideInDown 0.8s ease-out;
 }
 
 .live-monitoring h2 {
@@ -200,7 +250,8 @@ nav ul li a.sign-up:hover {
 /* Center wrapper */
 .camera-wrapper {
   display: flex;
-  justify-content: center; /* horizontal center */
+  justify-content: center;
+  animation: slideInUp 0.8s ease-out 0.2s backwards;
 }
 
 /* Camera feed box */
@@ -213,6 +264,8 @@ nav ul li a.sign-up:hover {
   overflow: hidden;
   box-shadow: 0 12px 28px rgba(20,30,50,0.06);
   padding: 0;
+  transform-origin: center;
+  transition: all 0.3s ease;
 }
 
 .camera-feed video {
