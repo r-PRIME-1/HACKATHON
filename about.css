@@ -250,3 +250,21 @@ nav ul li a.sign-up:hover {
   .avatar{width:96px;height:96px;border-radius:12px;font-size:28px}
   .intro h1{font-size:22px}
 }
+
+/* CTA Section */
+.cta-section{background:linear-gradient(135deg,rgba(255,75,43,0.1),rgba(255,65,108,0.1));padding:48px 32px;border-radius:16px;border:1px solid rgba(255,75,43,0.2);margin:40px 0;text-align:center}
+.cta-section h2{font-size:32px;font-weight:800;color:#fff;margin:0 0 12px}
+.cta-section p{color:var(--muted);margin:0 0 28px;font-size:16px}
+.cta-action-buttons{display:flex;justify-content:center;gap:16px;flex-wrap:wrap}
+.cta-btn{padding:12px 32px;border-radius:10px;font-weight:700;text-decoration:none;font-size:14px;cursor:pointer;transition:all 0.3s ease;text-transform:uppercase;letter-spacing:0.5px;display:inline-block;border:none}
+.cta-btn-primary{background:linear-gradient(90deg,#FF4B2B,#FF416C);color:#fff;box-shadow:0 4px 12px rgba(255,75,43,0.3)}
+.cta-btn-primary:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(255,75,43,0.4)}
+.cta-btn-secondary{background:transparent;color:#FF4B2B;border:2px solid #FF4B2B}
+.cta-btn-secondary:hover{background:rgba(255,75,43,0.1);transform:translateY(-2px)}
+
+@media (max-width:900px){
+  .cta-section{padding:32px 24px;margin:32px 0}
+  .cta-section h2{font-size:24px}
+  .cta-action-buttons{flex-direction:column}
+  .cta-btn{width:100%;text-align:center}
+}
