@@ -55,14 +55,16 @@
 
     <!-- Live Monitoring Component -->
 <section class="live-monitoring">
- <!-- Live Monitoring Component (Single Camera) -->
+ <!-- Live Monitoring Component (Single Camera, Centered) -->
 <section class="live-monitoring">
   <h2>Live Monitoring</h2>
-  <div class="camera-feed">
-    <span class="camera-status online">● Online</span>
-    <video id="camera" autoplay muted playsinline></video>
-    <div class="camera-name">Camera 1</div>
-    <button onclick="captureSnapshot()">📸 Capture</button>
+  <div class="camera-wrapper">
+    <div class="camera-feed">
+      <span class="camera-status online">● Online</span>
+      <video id="camera" autoplay muted playsinline></video>
+      <div class="camera-name">Camera 1</div>
+      <button onclick="captureSnapshot()">📸 Capture</button>
+    </div>
   </div>
 </section>
 
