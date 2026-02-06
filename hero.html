@@ -18,13 +18,13 @@
         <a href="#features">Features</a>
       </li>
       <li>
-        <a href="./about.html">About</a>
+        <a href="#about">About</a>
       </li>
       <li>
         <a href="#how">How It Works</a>
       </li>
       <li>
-        <a href="./contact.html">Contact</a>
+        <a href="#contact">Contact</a>
       </li>
       <li>
         <a href="./login.html" class="sign-in">Sign In</a>
@@ -49,13 +49,13 @@
         <a href="#features">Features</a>
       </li>
       <li>
-        <a href="./about.html">About</a>
+        <a href="#about">About</a>
       </li>
       <li>
         <a href="#how">How It Works</a>
       </li>
       <li>
-        <a href="./contact.html">Contact</a>
+        <a href="#contact">Contact</a>
       </li>
       <li>
         <a href="./login.html" class="sign-in">Sign In</a>
@@ -88,6 +88,31 @@
       <div class="floating-card card-3">
         <span class="icon">⚡</span>
         <h3>Fast</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about-section">
+    <div class="section-header">
+      <h2>About Curveilance</h2>
+      <p>We build privacy-first, on-device AI for real-time surveillance and operational insights.</p>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-card">
+        <h3>Our Mission</h3>
+        <p>Deliver accurate, low-latency detection while preserving individual privacy and minimizing bandwidth.</p>
+      </div>
+
+      <div class="about-card">
+        <h3>Approach</h3>
+        <p>On-device inference, selective recording, and cloud analytics for aggregated insights — not raw video.</p>
+      </div>
+
+      <div class="about-card">
+        <h3>Impact</h3>
+        <p>Used across campuses, retail, healthcare and industrial sites to improve safety and operations.</p>
       </div>
     </div>
   </section>
@@ -265,6 +290,43 @@
   </section>
 
   <!-- CTA Section -->
+  
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <div class="section-header">
+      <h2>Contact Us</h2>
+      <p>Have questions or want a demo? Drop us a message and our team will get back to you.</p>
+    </div>
+
+    <div class="contact-grid">
+      <form id="contact-form" class="contact-form">
+        <div class="form-row">
+          <input type="text" name="name" placeholder="Your name" required />
+          <input type="email" name="email" placeholder="Email address" required />
+        </div>
+        <textarea name="message" rows="6" placeholder="How can we help?" required></textarea>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </div>
+      </form>
+
+      <div class="contact-info">
+        <div class="info-card">
+          <h4>Sales</h4>
+          <p>sales@curveilance.ai</p>
+        </div>
+        <div class="info-card">
+          <h4>Support</h4>
+          <p>support@curveilance.ai</p>
+        </div>
+        <div class="info-card">
+          <h4>Headquarters</h4>
+          <p>San Francisco, CA</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="cta-section">
     <h2>Ready to Get Started?</h2>
     <p>Join leading organizations transforming their security with AI-powered surveillance</p>
@@ -280,9 +342,9 @@
       <div class="footer-section">
         <h4>Product</h4>
         <ul>
-          <li><a href="./about.html">About</a></li>
+          <li><a href="#about">About</a></li>
           <li><a href="#features">Features</a></li>
-          <li><a href="./contact.html">Contact</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
 
@@ -347,6 +409,17 @@
         }
       });
     });
+
+    // Contact form handler (simple client-side demo)
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+      contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = contactForm.querySelector('[name="name"]').value || '';
+        alert('Thanks ' + (name ? name + ', ' : '') + "we've received your message and will respond shortly.");
+        contactForm.reset();
+      });
+    }
   </script>
 </body>
 </html>

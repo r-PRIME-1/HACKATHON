@@ -81,9 +81,151 @@
   </div>
 </section>
 
-</section>
+    </section>
 
+    <!-- About Us Section -->
+    <section id="about" class="about-us-section">
+      <div class="about-container">
+        <div class="about-header">
+          <h2>About AI Smart Curveilance</h2>
+          <p>Revolutionizing surveillance with intelligent edge-computing and privacy-first analytics</p>
+        </div>
+
+        <div class="about-content">
+          <div class="about-text">
+            <h3>What We Do</h3>
+            <p>AI Smart Curveilance is a cutting-edge surveillance platform that brings artificial intelligence to the edge. Our mission is to provide fast, accurate, and privacy-preserving video analytics for organizations of all sizes.</p>
+            <ul class="about-features">
+              <li>Real-time object detection and tracking</li>
+              <li>Privacy-first anonymization at the edge</li>
+              <li>Sub-100ms inference latency</li>
+              <li>Dramatically reduced bandwidth consumption</li>
+              <li>Cloud-based dashboards and analytics</li>
+              <li>Enterprise-grade security</li>
+            </ul>
+          </div>
+
+          <div class="about-stats">
+            <div class="stat-card">
+              <h4>100+</h4>
+              <p>Organizations Trusted</p>
+            </div>
+            <div class="stat-card">
+              <h4>1M+</h4>
+              <p>Events Processed</p>
+            </div>
+            <div class="stat-card">
+              <h4>99.9%</h4>
+              <p>Uptime</p>
+            </div>
+            <div class="stat-card">
+              <h4>&lt;100ms</h4>
+              <p>Detection Speed</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="why-choose-section">
+          <h3>Why Choose Us?</h3>
+          <div class="why-grid">
+            <div class="why-card">
+              <div class="why-icon">⚡</div>
+              <h4>Lightning Fast</h4>
+              <p>Sub-100ms latency with edge processing ensures real-time alerts and immediate action</p>
+            </div>
+            <div class="why-card">
+              <div class="why-icon">🔐</div>
+              <h4>Privacy First</h4>
+              <p>On-device anonymization and selective recording keep sensitive data secure and compliant</p>
+            </div>
+            <div class="why-card">
+              <div class="why-icon">📊</div>
+              <h4>Deep Analytics</h4>
+              <p>Cloud dashboards provide actionable insights and historical trends for better decisions</p>
+            </div>
+            <div class="why-card">
+              <div class="why-icon">🌐</div>
+              <h4>Easy Integration</h4>
+              <p>REST APIs and standard connectors make integration seamless with existing systems</p>
+            </div>
+            <div class="why-card">
+              <div class="why-icon">💰</div>
+              <h4>Cost Effective</h4>
+              <p>70% bandwidth reduction and efficient edge processing means lower operational costs</p>
+            </div>
+            <div class="why-card">
+              <div class="why-icon">🎯</div>
+              <h4>Highly Accurate</h4>
+              <p>Advanced AI models trained on diverse data deliver industry-leading detection accuracy</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="contact-us-section">
+      <div class="contact-container">
+        <div class="contact-header">
+          <h2>Get in Touch</h2>
+          <p>Have questions? We'd love to hear from you. Reach out and let's start a conversation.</p>
+        </div>
+
+        <div class="contact-content">
+          <div class="contact-form-section">
+            <h3>Send us a Message</h3>
+            <form class="quick-contact-form" onsubmit="handleContactSubmit(event)">
+              <input type="text" placeholder="Your Name" required>
+              <input type="email" placeholder="Your Email" required>
+              <input type="text" placeholder="Subject" required>
+              <textarea placeholder="Your message..." rows="4" required></textarea>
+              <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+          </div>
+
+          <div class="contact-info-section">
+            <h3>Contact Information</h3>
+            <div class="contact-info-grid">
+              <div class="info-item">
+                <div class="info-icon">📧</div>
+                <h4>Email</h4>
+                <p><a href="mailto:contact@curveilance.example">contact@curveilance.example</a></p>
+              </div>
+              <div class="info-item">
+                <div class="info-icon">📞</div>
+                <h4>Phone</h4>
+                <p><a href="tel:+1234567890">+1 (234) 567-8900</a></p>
+              </div>
+              <div class="info-item">
+                <div class="info-icon">📍</div>
+                <h4>Address</h4>
+                <p>123 Tech Street<br>San Francisco, CA 94105</p>
+              </div>
+              <div class="info-item">
+                <div class="info-icon">⏰</div>
+                <h4>Business Hours</h4>
+                <p>Mon - Fri: 9AM - 6PM EST<br>Support: 24/7</p>
+              </div>
+            </div>
+
+            <div class="contact-cta">
+              <p>Ready to get started?</p>
+              <a href="./login.html" class="cta-btn">Sign Up Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <script src="index.js"></script>
+    <script>
+      function handleContactSubmit(e) {
+        e.preventDefault();
+        const form = e.target;
+        const name = form.querySelector('input[type="text"]').value;
+        alert(`Thank you ${name}! We'll get back to you shortly.`);
+        form.reset();
+      }
+    </script>
   </body>
 </html>
