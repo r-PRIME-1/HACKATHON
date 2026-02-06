@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
   <link rel="stylesheet" href="contact.css">
   <meta name="color-scheme" content="light dark">
 </head>
+
 <body>
   <nav>
     <ul>
@@ -71,7 +73,8 @@
     <section class="contact-header">
       <div class="header-content">
         <h1>Get in Touch</h1>
-        <p>Have questions about AI Smart Curveilance? We'd love to hear from you. Reach out to us through any of these channels.</p>
+        <p>Have questions about AI Smart Curveilance? We'd love to hear from you. Reach out to us through any of these
+          channels.</p>
       </div>
     </section>
 
@@ -152,7 +155,8 @@
       <div class="faq-grid">
         <div class="faq-item">
           <h3>What is the typical response time?</h3>
-          <p>We aim to respond to all inquiries within 24 business hours. For urgent matters, please call us directly.</p>
+          <p>We aim to respond to all inquiries within 24 business hours. For urgent matters, please call us directly.
+          </p>
         </div>
 
         <div class="faq-item">
@@ -162,7 +166,8 @@
 
         <div class="faq-item">
           <h3>What regions do you serve?</h3>
-          <p>We currently serve North America, Europe, and select Asia-Pacific regions. Contact us for specific coverage.</p>
+          <p>We currently serve North America, Europe, and select Asia-Pacific regions. Contact us for specific
+            coverage.</p>
         </div>
 
         <div class="faq-item">
@@ -185,7 +190,8 @@
 
   <!-- Footer -->
   <footer class="footer">
-    <p>&copy; 2026 AI Smart Curveilance. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    <p>&copy; 2026 AI Smart Curveilance. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of
+        Service</a></p>
   </footer>
 
   <script>
@@ -211,18 +217,19 @@
     if (contactForm) {
       contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        
+
         // Collect form data
         const formData = new FormData(contactForm);
         const data = Object.fromEntries(formData);
-        
+
         // Show success message
         alert(`Thank you for your message, ${data.name}! We will get back to you shortly at ${data.email}`);
-        
+
         // Reset form
         contactForm.reset();
       });
     }
   </script>
 </body>
+
 </html>
