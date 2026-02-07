@@ -408,6 +408,22 @@ nav ul li a.sign-up::after {
   display: none;
 }
 
+nav ul li a.logout-btn {
+  color: #ff6b6b;
+  font-weight: 600;
+  padding: 10px 16px;
+  transition: all 0.3s ease;
+}
+
+nav ul li a.logout-btn:hover {
+  background-color: rgba(255, 107, 107, 0.15);
+  color: #ff8787;
+}
+
+nav ul li a.logout-btn::after {
+  display: none;
+}
+
 .hamburger {
   display: none;
   cursor: pointer;
