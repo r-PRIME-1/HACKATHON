@@ -1,32 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Responsive Navbar</title>
-    <link rel="stylesheet" type="text/css" target="_blank" href="index.css" />
-  </head>
-  <body>
-    <section class=" navi">
-    <nav>
-      <div class="logo">
-        <!-- <img src="assets/Logo64x64.png" alt="logo" /> -->
-        <h1>LOGO</h1>
-      </div>
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Dashboard — AI Smart Curveilance</title>
+  <link rel="stylesheet" href="index.css">
+  <meta name="color-scheme" content="light dark">
+</head>
+
+<body>
+  <!-- Sidebar -->
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-header">
+      <h3>Dashboard</h3>
+      <button id="sidebar-close" class="sidebar-close">&times;</button>
+    </div>
+
+    <div class="sidebar-profile">
+      <div class="profile-avatar"
+        style="width: 60px; height: 60px; border-radius: 12px; background: linear-gradient(135deg, #FF4B2B, #FF416C); display: flex; align-items: center; justify-content: center; font-size: 24px;">
+        👤</div>
+      <div class="profile-info">
+        <h4>John Doe</h4>
+        <p style="font-size: 12px; margin: 4px 0 0 0;">Premium User</p>
+        <span class="status-badge online"
+          style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #4ade80; margin-top: 6px;"></span>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <div class="nav-section">
+        <p class="nav-label">Dashboard</p>
+        <ul>
+          <li><a href="#dashboard" class="sidebar-link active" data-icon="📊">Overview</a></li>
+          <li><a href="#cameras" class="sidebar-link" data-icon="🎥">Cameras</a></li>
+          <li><a href="#analytics" class="sidebar-link" data-icon="📈">Analytics</a></li>
+          <li><a href="#alerts" class="sidebar-link" data-icon="🔔">Alerts</a></li>
+        </ul>
+      </div>
+      <div class="nav-section">
+        <p class="nav-label">Account</p>
+        <ul>
+          <li><a href="#profile" class="sidebar-link" data-icon="👤">My Profile</a></li>
+          <li><a href="#settings" class="sidebar-link" data-icon="⚙️">Settings</a></li>
+          <li><a href="#reports" class="sidebar-link" data-icon="📄">Reports</a></li>
+          <li><a href="#billing" class="sidebar-link" data-icon="💳">Billing</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="sidebar-footer">
+      <a href="#help" class="sidebar-link-footer help">❓ Help & Support</a>
+      <a href="./login.html" class="sidebar-link-footer logout">🚪 Logout</a>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <nav>
       <ul>
         <li>
-          <a href="#">Home</a>
+          <a href="./index.html">Home</a>
         </li>
         <li>
-          <a href="#">Services</a>
+          <a href="#features">Features</a>
         </li>
         <li>
-          <a href="#">Blog</a>
+          <a href="./about.html">About</a>
         </li>
         <li>
-          <a href="#">Contact Us</a>
+          <a href="#how">How It Works</a>
+        </li>
+        <li>
+          <a href="./contact.html">Contact</a>
+        </li>
+        <li>
+          <button id="sidebar-toggle" class="sidebar-toggle" title="Open sidebar">👤</button>
         </li>
       </ul>
       <div class="hamburger">
@@ -35,42 +86,399 @@
         <span class="line"></span>
       </div>
     </nav>
+
     <div class="menubar">
       <ul>
         <li>
-          <a href="#">Home</a>
+          <a href="./index.html">Home</a>
         </li>
         <li>
-          <a href="#">Services</a>
+          <a href="#features">Features</a>
         </li>
         <li>
-          <a href="#">Blog</a>
+          <a href="./about.html">About</a>
         </li>
         <li>
-          <a href="#">Contact Us</a>
+          <a href="#how">How It Works</a>
+        </li>
+        <li>
+          <a href="./contact.html">Contact</a>
         </li>
       </ul>
     </div>
+
+    <!-- Dashboard Section -->
+    <section id="dashboard" class="dashboard-section">
+      <div class="dashboard-header">
+        <div class="welcome-banner">
+          <h1>Welcome back, John! 👋</h1>
+          <p>Your security system is operating normally. All cameras online and running.</p>
+          <div class="system-status">
+            <span class="status-dot online"></span> System OK
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Stats -->
+      <div class="dashboard-stats">
+        <div class="stat-card">
+          <div class="stat-icon">🎥</div>
+          <div class="stat-content">
+            <p class="stat-label">Cameras Online</p>
+            <h3 class="stat-value">12</h3>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">🔔</div>
+          <div class="stat-content">
+            <p class="stat-label">Active Alerts</p>
+            <h3 class="stat-value">3</h3>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">📂</div>
+          <div class="stat-content">
+            <p class="stat-label">Storage Used</p>
+            <h3 class="stat-value">287GB</h3>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">📊</div>
+          <div class="stat-content">
+            <p class="stat-label">Detections (24h)</p>
+            <h3 class="stat-value">1,247</h3>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recent Activity -->
+      <div class="dashboard-grid">
+        <div class="dashboard-panel">
+          <h3>Recent Activity</h3>
+          <div class="activity-list">
+            <div class="activity-item">
+              <span class="activity-icon">⚠️</span>
+              <div class="activity-details">
+                <p class="activity-title">Motion detected - Zone B</p>
+                <p class="activity-time">2 minutes ago</p>
+              </div>
+            </div>
+            <div class="activity-item">
+              <span class="activity-icon">✅</span>
+              <div class="activity-details">
+                <p class="activity-title">Backup completed successfully</p>
+                <p class="activity-time">1 hour ago</p>
+              </div>
+            </div>
+            <div class="activity-item">
+              <span class="activity-icon">🎥</span>
+              <div class="activity-details">
+                <p class="activity-title">Camera 5 went offline</p>
+                <p class="activity-time">3 hours ago</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="dashboard-panel">
+          <h3>Quick Actions</h3>
+          <div class="quick-actions">
+            <button class="action-btn">🎥 View Cameras</button>
+            <button class="action-btn">📊 View Analytics</button>
+            <button class="action-btn">📥 Download Report</button>
+            <button class="action-btn">⚙️ System Settings</button>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Live Monitoring Component -->
-<section class="live-monitoring">
- <!-- Live Monitoring Component (Single Camera, Centered) -->
-<section class="live-monitoring">
-  <h2>Live Monitoring</h2>
-  <div class="camera-wrapper">
-    <div class="camera-feed">
-      <span class="camera-status online">● Online</span>
-      <video id="camera" autoplay muted playsinline></video>
-      <div class="camera-name">Camera 1</div>
-      <button onclick="captureSnapshot()">📸 Capture</button>
-    </div>
+    <!-- Trust Indicators -->
+    <section class="trust-section">
+      <div class="stat">
+        <h3>100+</h3>
+        <p>Organizations</p>
+      </div>
+      <div class="stat">
+        <h3>1M+</h3>
+        <p>Events Processed</p>
+      </div>
+      <div class="stat">
+        <h3>99.9%</h3>
+        <p>Uptime</p>
+      </div>
+      <div class="stat">
+        <h3>&lt;100ms</h3>
+        <p>Detection Latency</p>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+      <div class="section-header">
+        <h2>Powerful Features</h2>
+        <p>Everything you need for intelligent surveillance</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🎯</div>
+          <h3>Accurate Detection</h3>
+          <p>Advanced AI models detect objects, people, and anomalies with high precision</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🚀</div>
+          <h3>Edge Processing</h3>
+          <p>Process data locally for ultra-low latency and reduced bandwidth</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🔐</div>
+          <h3>Privacy First</h3>
+          <p>On-device anonymization and selective recording protect privacy</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">📊</div>
+          <h3>Rich Analytics</h3>
+          <p>Cloud dashboards for trends, insights, and actionable intelligence</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🔗</div>
+          <h3>Easy Integration</h3>
+          <p>REST APIs and connectors for seamless system integration</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">⚙️</div>
+          <h3>Flexible Deployment</h3>
+          <p>Cloud, on-premise, or hybrid deployment options available</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how" class="how-section">
+      <div class="section-header">
+        <h2>How It Works</h2>
+        <p>Simple integration, powerful results</p>
+      </div>
+
+      <div class="steps-container">
+        <div class="step">
+          <div class="step-number">01</div>
+          <h3>Deploy</h3>
+          <p>Install Curveilance on your edge device or connect your existing cameras</p>
+        </div>
+
+        <div class="step">
+          <div class="step-number">02</div>
+          <h3>Detect</h3>
+          <p>AI models process video streams in real-time on device</p>
+        </div>
+
+        <div class="step">
+          <div class="step-number">03</div>
+          <h3>Alert</h3>
+          <p>Receive instant notifications for critical events and anomalies</p>
+        </div>
+
+        <div class="step">
+          <div class="step-number">04</div>
+          <h3>Analyze</h3>
+          <p>Access cloud dashboards for historical trends and insights</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+      <div class="benefits-content">
+        <div class="benefits-text">
+          <h2>Why Choose Curveilance?</h2>
+          <ul class="benefits-list">
+            <li><span class="checkmark">✓</span> Lightning-fast detection with sub-100ms latency</li>
+            <li><span class="checkmark">✓</span> Privacy-preserving anonymization and selective recording</li>
+            <li><span class="checkmark">✓</span> Dramatically reduced bandwidth through on-device processing</li>
+            <li><span class="checkmark">✓</span> Highly accurate computer vision models trained on diverse data</li>
+            <li><span class="checkmark">✓</span> Enterprise-grade security with end-to-end encryption</li>
+            <li><span class="checkmark">✓</span> 24/7 technical support and regular model updates</li>
+          </ul>
+        </div>
+
+        <div class="benefits-visual">
+          <div class="benefit-card">
+            <h4>Bandwidth Savings</h4>
+            <p class="stat-text">70% reduction in data transfer</p>
+          </div>
+          <div class="benefit-card">
+            <h4>Processing Speed</h4>
+            <p class="stat-text">Processing at edge</p>
+          </div>
+          <div class="benefit-card">
+            <h4>Privacy Score</h4>
+            <p class="stat-text">100% GDPR compliant</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section class="usecases-section">
+      <div class="section-header">
+        <h2>Use Cases</h2>
+        <p>Trusted by leading organizations</p>
+      </div>
+
+      <div class="usecases-grid">
+        <div class="usecase-card">
+          <h3>🏫 Campus Safety</h3>
+          <p>Perimeter monitoring, intrusion detection, and emergency response coordination</p>
+        </div>
+
+        <div class="usecase-card">
+          <h3>🏪 Retail Analytics</h3>
+          <p>Footfall analysis, queue management, and customer behavior insights</p>
+        </div>
+
+        <div class="usecase-card">
+          <h3>🏥 Healthcare</h3>
+          <p>Patient monitoring, fall detection, and privacy-preserving analytics</p>
+        </div>
+
+        <div class="usecase-card">
+          <h3>🔧 Industrial Safety</h3>
+          <p>Equipment monitoring, safety compliance, and anomaly detection</p>
+        </div>
+
+        <div class="usecase-card">
+          <h3>🚗 Traffic Management</h3>
+          <p>Vehicle counting, traffic flow optimization, and incident detection</p>
+        </div>
+
+        <div class="usecase-card">
+          <h3>🏨 Hospitality</h3>
+          <p>Guest experience monitoring, security, and operational insights</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <h2>Ready to Get Started?</h2>
+      <p>Join leading organizations transforming their security with AI-powered surveillance</p>
+      <div class="cta-buttons">
+        <a href="./login.html" class="btn btn-primary">Sign Up Now</a>
+        <a href="./contact.html" class="btn btn-secondary">Contact Sales</a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Security</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">GitHub</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 AI Smart Curveilance. All rights reserved.</p>
+      </div>
+    </footer>
   </div>
-</section>
 
-</section>
+  <script>
+    // Sidebar functionality
+    const sidebarToggle = document.getElementById('sidebar-toggle');
+    const sidebar = document.getElementById('sidebar');
+    const sidebarClose = document.getElementById('sidebar-close');
 
+    sidebarToggle.addEventListener('click', () => {
+      sidebar.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
 
-    <script src="index.js"></script>
-  </body>
+    const closeSidebar = () => {
+      sidebar.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    };
+
+    sidebarClose.addEventListener('click', closeSidebar);
+
+    // Close sidebar when clicking on a nav link
+    document.querySelectorAll('.sidebar-link').forEach(link => {
+      link.addEventListener('click', closeSidebar);
+    });
+
+    // Close sidebar on escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeSidebar();
+      }
+    });
+
+    // Hamburger menu functionality
+    const hamburger = document.querySelector('.hamburger');
+    const menubar = document.querySelector('.menubar');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('hamburger-active');
+      menubar.classList.toggle('active');
+    });
+
+    const menuLinks = menubar.querySelectorAll('a');
+    menuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('hamburger-active');
+        menubar.classList.remove('active');
+      });
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+</body>
+
 </html>
